@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>PackPal — Smart AI Packing Assistant</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <h1>
+        Tired of over-packing, under-packing or don't know what to pack?
+        Meet PackPal — your smart AI packing assistant that helps you pack smart, light and right
+      </h1>
+      <p class="intro muted">
+        Fill the trip details below and PackPal will build a practical, age-appropriate packing list tailored to your trip.
+      </p>
+    </header>
+
+    <main>
+      <section class="card form">
+        <h2>New Trip</h2>
+
+        <label>Packing profile
+          <select id="profile">
+            <option>Infant (0-1yrs)</option>
+            <option>Toddler (2-4yrs) - Boy</option>
+            <option>Toddler (2-4yrs) - Girl</option>
+            <option>Child (5-8yrs) - Boy</option>
+            <option>Child (5-8yrs) - Girl</option>
+            <option>Pre-Teen (9-12yrs) - Boy</option>
+            <option>Pre-Teen (9-12yrs) - Girl</option>
+            <option>Teenager (13-19yrs) - Boy</option>
+            <option>Teenager (13-19yrs) - Girl</option>
+            <option>Young Adult (20-25yrs) - Male</option>
+            <option>Young Adult (20-25yrs) - Female</option>
+            <option>Adult (26-59yrs) - Male</option>
+            <option>Adult (26-59yrs) - Female</option>
+            <option>Senior Citizen (60+) - Male</option>
+            <option>Senior Citizen (60+) - Female</option>
+          </select>
+        </label>
+
+        <label>Trip Type
+          <select id="tripType">
+            <option>Business/Work</option>
+            <option>Leisure/Vacation</option>
+            <option>Business/Work and Leisure/Vacation</option>
+          </select>
+        </label>
+
+        <label>Mode of Transportation
+          <select id="transport">
+            <option>Airplane</option>
+            <option>Bus</option>
+            <option>Train</option>
+            <option>Taxi</option>
+            <option>Ship or Boat</option>
+            <option>Self-Driving</option>
+            <option>Combination: Airplane + Train</option>
+            <option>Combination: Airplane + Bus</option>
+            <option>Combination: Train + Bus</option>
+            <option>Combination: Self-Driving + Train</option>
+          </select>
+        </label>
+
+        <label>Home / Point of Departure
+          <input id="home" type="text" placeholder="e.g. Johannesburg, South Africa"/>
+        </label>
+
+        <label>Destination
+          <input id="dest" type="text" placeholder="e.g. Cape Town, South Africa"/>
+        </label>
+
+        <div class="row">
+          <div class="col">
+            <label>Start Date
+              <input id="start" type="date"/>
+            </label>
+          </div>
+          <div class="col">
+            <label>End Date
+              <input id="end" type="date"/>
+            </label>
+          </div>
+        </div>
+
+        <label>Notes / Special Considerations / Additional Information
+          <textarea id="notes" placeholder="e.g. International trip, formal meetings, car rental..."></textarea>
+        </label>
+
+        <button id="generateBtn" class="btn">Generate Packing List</button>
+        <div id="status" class="muted"></div>
+      </section>
+
+      <section class="card" id="listCard">
+        <h2 id="listTitle">Packing List</h2>
+        <div id="listContainer"></div>
+        <div id="tips" style="margin-top:12px;"></div>
+      </section>
+    </main>
+
+    <footer class="foot">Smart AI Packing Assistant</footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
